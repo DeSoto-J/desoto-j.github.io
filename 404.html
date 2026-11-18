@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intreaty</title>
+  <script>
+    // Any address starting with /intreaty in the wrong upper/lower case
+    // goes to the real app at /Intreaty/.
+    (function () {
+      var p = location.pathname;
+      if (/^\/intreaty(\/|$)/i.test(p)) {
+        location.replace('/Intreaty' + (p.slice(9) || '/') + location.search + location.hash);
+      }
+    })();
+  </script>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #f4efe7; color: #2b241e; padding: 24px; box-sizing: border-box; }
+    @media (prefers-color-scheme: dark) { body { background: #161310; color: #efe7dc; } a { color: #c9a27e; } }
+    a { color: #8a6343; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <p>Page not found.<br><a href="/Intreaty/">Open Intreaty</a></p>
+</body>
+</html>
